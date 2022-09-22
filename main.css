@@ -1,4 +1,6 @@
-* {padding:0;margin:0;}
+* {padding:0;margin:0;font-family: Noto Sans, sans-serif;}
+h1 {font-size:18px;line-height:52px;margin-left:4px;font-weight:900;}
+form {width:1024px;}
 .row {display:flex;flex-direction:row;gap:4px;margin-bottom:4px;}
 .form-input {display:flex;flex-direction: column;margin-left:4px;}
 .form-input label {color:#6B778C;font-size:12px;line-height:16px;margin-bottom:4px;font-weight:800;}
@@ -7,8 +9,17 @@
 .form-button {margin:20px 0 0 4px;}
 .form-button .btn-result {padding:0 40px;height:48px;background-color:#0E1E3A;color:#FFF;text-align: center;border-radius:4px;display:flex;justify-content:center;align-items:center;border:none;}
 
-/* .btn {width:48px;height:48px;background-color:#2699FB;color:#FFF;border-radius:4px;display:flex;justify-content:center;align-items:center;border:none;font-size:12px;font-weight:700;}
-.btn:active {background-color:#007FEB;}
-.btn-lg {width:100px;height:48px;}
-.input {margin:0;margin-bottom:4px;padding:0 12px;width:204px;height:48px;box-sizing:border-box;outline:none;}
-.input:disabled {background-color:#FFF;border:1px solid #BCE0FD;color:#BCE0FD;font-size:14px;} */
+.bmi-progress {appearance: none; width:512px; height:6px; margin:24px 8px 0 8px;}
+.bmi-progress::-webkit-progress-bar {background:#f0f0f0;border-radius:6px;box-shadow: inset 3px 3px 10px #ccc;}
+.bmi-progress::-webkit-progress-value {border-radius:6px;}
+
+.bmi-message {display:flex;flex-direction:column;margin:18px 0 12px;align-items:center;}
+.bmi-message .main {font-size:18px;line-height:24px;}
+.bmi-message .sub {font-size:14px;line-height:26px;}
+
+.normal .bmi-progress::-webkit-progress-value {background: #11A65E;}
+.normal .msg-color {color:#11A65E;}
+.overweight .bmi-progress::-webkit-progress-value {background: #E31C1C;}
+.overweight .msg-color {color:#E31C1C;}
+.underweight .bmi-progress::-webkit-progress-value {background: #955BDF;}
+.underweight .msg-color {color:#955BDF;}

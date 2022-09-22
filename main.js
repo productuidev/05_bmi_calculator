@@ -1,5 +1,6 @@
 // submit
 function onSubmit(event) {
   event.preventDefault();
-  console.log('submit');
+  event.target[0].value
+  event.target[1].value
 }
