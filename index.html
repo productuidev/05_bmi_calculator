@@ -12,7 +12,7 @@
 
 <body>
   <h1>BMI 계산기</h1>
-  <form onsubmit="onSubmit(event)">
+  <form onsubmit="onSubmit(event)" onreset="document.getElementById('res').style.display = 'none'">
     <div class="row">
       <div class="form-input">
         <label for="bmi-weight">몸무게(kg)</label>
@@ -31,18 +31,21 @@
   </form>
 
   <!-- 정상 -->
-  <div class="row">
+  <div id="res" class="row" style="display:none;">
     <div class="bmi-wrap normal">
       <progress class="bmi-progress" value="20" min="0" max="100"></progress>
       <div class="bmi-message">
         <p class="main">당신의 BMI는 <strong class="msg-color">20.00</strong> 입니다.</p>
         <p class="sub"><strong class="msg-color">정상</strong> 입니다.</p>
       </div>
+      <div class="row">
+        <button type="reset" class="btn-result">초기화</button>
+      </div>
     </div>
   </div>
 
   <!-- 과체중 -->
-  <div class="row">
+  <!-- <div class="row">
     <div class="bmi-wrap overweight">
       <progress class="bmi-progress" value="40" min="0" max="100"></progress>
       <div class="bmi-message">
@@ -50,10 +53,10 @@
         <p class="sub"><strong class="msg-color">과체중</strong> 입니다.</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- 저체중 -->
-  <div class="row">
+  <!-- <div class="row">
     <div class="bmi-wrap underweight">
       <progress class="bmi-progress" value="14" min="0" max="100"></progress>
       <div class="bmi-message">
@@ -61,7 +64,7 @@
         <p class="sub"><strong class="msg-color">저체중</strong> 입니다.</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </body>
 </html>
