@@ -31,12 +31,12 @@
 
 
   <!-- 정상 -->
-  <div id="res" class="row" style="display:none;">
+  <div id="res" class="row">
     <div class="bmi-wrap normal">
       <progress class="bmi-progress" value="20" min="0" max="100"></progress>
       <div class="bmi-message">
-        <p class="main">당신의 BMI는 <strong class="msg-color">20.00</strong> 입니다.</p>
-        <p class="sub"><strong class="msg-color">정상</strong> 입니다.</p>
+        <p class="main">당신의 BMI는 <strong id="bmi" class="msg-color"></strong> 입니다.</p>
+        <p class="sub"><strong id="state" class="msg-color"></strong> 입니다.</p>
       </div>
       <div class="row">
         <button type="reset" class="btn-result">초기화</button>
