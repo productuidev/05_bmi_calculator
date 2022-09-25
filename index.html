@@ -31,14 +31,14 @@
 
     <!-- 정상 normal, 과체중 overweight, 저체중 underweight -->
     <div id="res">
-      <div class="bmi-wrap normal">
-        <progress class="bmi-progress" value="20" min="0" max="100"></progress>
+      <div class="bmi-wrap">
+        <progress id="bmi-progress" class="progress" value="" min="10" max="29.9" optimum="22" low="18.5" high="25"></progress>
         <div class="bmi-message">
           <p class="main">당신의 BMI는 <strong id="bmi" class="msg-color"></strong> 입니다.</p>
           <p class="sub"><strong id="state" class="msg-color"></strong> 입니다.</p>
         </div>
         <div class="row">
-          <button type="reset" class="btn-result line">초기화</button>
+          <button type="reset" id="reset" class="btn-result line">초기화</button>
         </div>
       </div>
     </div>

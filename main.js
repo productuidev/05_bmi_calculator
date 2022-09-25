@@ -21,18 +21,33 @@ function onSubmit(event) {
   res.style.display = "block"
 
   // bmi & state
-  document.getElementById("bmi").innerText = bmi.toFixed(2)
+  const bmiEl = document.getElementById("bmi");
+  const progressEl = document.getElementById("bmi-progress");
+  bmiEl.innerText = bmi.toFixed(2)
+  progressEl.value = bmi
 
-  let state = ""
+  let state;
+  let common = true
 
-  if(bmi < 18.5)
+  if(bmi < 18.5) {
     state = "저체중"
-  if(bmi >= 18.5 && bmi <= 24.9)
+    common = false;
+    progressEl.classList.add('underweight')
+  }
+  if(bmi >= 18.5 && bmi <= 24.9) {
     state = "정상"
-  if(bmi >= 25 && bmi <= 29.9)
+    common = true;
+    progressEl.classList.add('normal')
+  }
+  if(bmi >= 25 && bmi <= 29.9) {
     state = "과체중"
+    common = false;
+    progressEl.classList.add('overweight')
+  }
 
-  document.getElementById("state").innerText = state
-
+  const stateEl = document.getElementById("state");
+  stateEl.innerText = state
+  stateEl.style.color = common ? "#11A65E" : "#E31C1C"
+  bmiEl.style.color = common ? "#11A65E" : "#E31C1C"
 
 }

@@ -8,6 +8,7 @@ ol, ul {list-style: none;}
 blockquote, q {quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
+
 h1 {font-size:18px;line-height:52px;text-align:center;font-weight:900;margin-bottom:24px;}
 form {width:100%;}
 .row {display:flex;flex-direction:row;justify-content:center;gap:4px;margin-bottom:4px;}
@@ -18,17 +19,17 @@ form {width:100%;}
 .form-button {margin:20px 0 0 4px;}
 .btn-result {padding:0 40px;height:48px;background-color:#0E1E3A;color:#FFF;text-align: center;border-radius:4px;display:flex;justify-content:center;align-items:center;border:none;}
 .btn-result.line {color:#0E1E3A;border:1px solid #0E1E3A;background-color:#FFF;margin-top:8px;}
-.bmi-wrap {display:flex;flex-direction: column;align-content: center;padding:36px 0px;}
-.bmi-progress {appearance: none; width:512px; height:6px; margin:0 auto;}
-.bmi-progress::-webkit-progress-bar {background:#EBECF0;border-radius:6px;box-shadow: inset 3px 3px 10px #EBECF0;}
-.bmi-progress::-webkit-progress-value {border-radius:6px;}
+
+.bmi-wrap {display:flex;flex-direction: column;align-content: center;padding:18px 0 36px;}
+.progress {appearance: none; width:512px; height:6px; margin:0 auto;}
+.progress::-webkit-progress-bar {background:#EBECF0;border-radius:6px;box-shadow: inset 3px 3px 10px #EBECF0;}
+.progress::-webkit-progress-value {border-radius:6px;}
+.progress.normal::-webkit-progress-value {background: #11A65E;}
+.progress.overweight::-webkit-progress-value,
+.progress.underweight::-webkit-progress-value {background: #E31C1C;}
+
 .bmi-message {margin:18px 0 12px;text-align:center;}
 .bmi-message .main {font-size:18px;line-height:24px;}
 .bmi-message .sub {font-size:14px;line-height:26px;}
 .bmi-message .msg-color {font-weight:800;}
-.normal .bmi-progress::-webkit-progress-value {background: #11A65E;}
-.normal .msg-color {color:#11A65E;}
-.overweight .bmi-progress::-webkit-progress-value {background: #E31C1C;}
-.overweight .msg-color {color:#E31C1C;}
-.underweight .bmi-progress::-webkit-progress-value {background: #955BDF;}
-.underweight .msg-color {color:#955BDF;}
+
