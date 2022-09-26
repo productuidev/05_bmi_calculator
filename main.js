@@ -35,22 +35,22 @@ function onSubmit(event) {
   let state;
   let common = true
 
-  if(bmi < 20) {
+  if(bmi < 18.5) {
     state = "저체중"
     common = false;
     progressEl.classList.add('underweight')
   }
-  if(bmi >= 20 && bmi <= 24) {
+  if(bmi >= 18.5 && bmi <= 23) {
     state = "정상체중"
     common = true;
     progressEl.classList.add('normal')
   }
-  if(bmi >= 25 && bmi <= 29) {
+  if(bmi >= 23 && bmi <= 25) {
     state = "과체중"
     common = false;
     progressEl.classList.add('overweight')
   }
-  if(bmi >= 30) {
+  if(bmi >= 25) {
     state = "비만"
     common = false;
     progressEl.classList.add('obesity')
